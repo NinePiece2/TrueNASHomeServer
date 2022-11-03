@@ -10,3 +10,4 @@ It would eventually be upgraded to a 1TB Hard Drive and a 250 GB Boot SSD that w
 
 ## Current Configurations
 
+With the loss of data in mind as well as possible virtualization it was important to start with s system that would not be 
