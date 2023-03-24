@@ -70,11 +70,11 @@ Then restart the system and the card should show up in the TrueNAS dashbord like
 
 The next part is simple we just need to setup IP addresses on the device as the two systems are connected directly without a switch to automatically assign them. On Windows go to Network Connections and right click on the network adapter that the cable was attached to and select properties. Then double click on the Internet Protocol Version 4 and enable the option to use a given address and to use a given DNS server address. Enter in an IP address and Subnet Mask as shown in the image below.
 
-[<img src=images/WindowsIPConfig.PNG height=600>](images/WindowsIPConfig.PNG)
+[<img src=images/WindowsIPConfig.PNG height=500>](images/WindowsIPConfig.PNG)
 
 Now on the TrueNAS side from the web GUI go to network -> then select the interface that the cable is connected to and add an Alias. The IP address used here should have the same staring portions with the last part changed and they should use the same subnet mask.
 
-[<img src=images/TrueNASIPConfig.PNG height=600>](images/TrueNASIPConfig.PNG)
+[<img src=images/TrueNASIPConfig.PNG height=500>](images/TrueNASIPConfig.PNG)
 
 ## Modifications
 
