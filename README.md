@@ -34,7 +34,7 @@ After this the system would boot loop after reaching the login screen. This was 
 
 [<img src=images/SCSIController.PNG height=400>](images/SCSIController.PNG)
 
-After this its as simple as following the rest of the YouTube video and setting everything up through Cloudflare. The load balancer is currently hosts the TrueNAS server on the domain [truenas.ninepiece2.tk]( truenas.ninepiece2.tk).
+After this its as simple as following the rest of the YouTube video and setting everything up through Cloudflare. The load balancer is currently hosts the TrueNAS server on the domain [truenas.ninepiece2.tk](https://truenas.ninepiece2.tk).
 
 
 ## Setting Up a Pair of Mellanox Connectx-3 
