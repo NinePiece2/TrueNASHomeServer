@@ -28,9 +28,11 @@ qemu-img convert -f vmdk filename.vmdk -O qcow2 filename.qcow2
 
 As a note because Proxmox was not running on bare metal KVM hardware virtualization needed to be turned off:
 
-
+[<img src=images/KVM.PNG height=400>](images/KVM.PNG)
 
 After this the system would boot loop after reaching the login screen. This was fixed by changing the SCSI Controller to VMware PVSCSI in the hardware tab:
+
+[<img src=images/SCSIController.PNG height=400>](images/SCSIController.PNG)
 
 ## Modifications
 
