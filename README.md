@@ -17,3 +17,21 @@ When it comes to the other hardware I just tried to reuse as much previous hardw
 <br/>
 
 [<img src=images/CurrentConfig.PNG height=500>](images/CurrentConfig.PNG)
+
+## Virtual Environments 
+
+The software setup is quite simple, the server runs bare metal TrueNAS Scale Bluefin and using the built in hypervisor there are two virtual machines. The first is an ubuntu server VM that currently hosts a Minecraft and Assetto Corsa Servers and the second is a Proxmox VM that currently only hosts a Kemp Load Balancer on the Proxmox hypervisor. The load balancer lets me setup a DNS for all of the pages so that I can access them from anywhere around the world and they all have SSL certificates. The Kemp Load Balancer setup came from [here](https://www.youtube.com/watch?v=LlbTSfc4biw&ab_channel=NetworkChuck) however some modifications were needed as I was using Proxmox and not ESXI. All that was needed was a conversion from vmdk to qcow2 which can be done using the following code: 
+
+```
+qemu-img convert -f vmdk filename.vmdk -O qcow2 filename.qcow2
+```
+
+As a note because Proxmox was not running on bare metal KVM hardware virtualization needed to be turned off:
+
+
+
+After this the system would boot loop after reaching the login screen. This was fixed by changing the SCSI Controller to VMware PVSCSI in the hardware tab:
+
+## Modifications
+
+After the initial setup another 3 drive Vdev was added and striped to the already exisiting Raid-Z1 pool. 
