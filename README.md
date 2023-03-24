@@ -39,7 +39,7 @@ After this its as simple as following the rest of the YouTube video and setting 
 
 ## Setting Up a Pair of Mellanox Connectx-3
 
-This honestly should have been simpler but took a lot of time to figure out as there are not many people running this configuration. I bought 2 Mellanox ConnectX-3 CX354A Dual 40GbE QSFP cards that had been flashed to MCX354A-FCBT which allowed it to function in Ethernet mode as well as InfiniBand mode.
+This honestly should have been simpler but took a lot of time to figure out as there are not many people running this configuration. I bought 2 Mellanox ConnectX-3 CX354A Dual 40GbE QSFP cards that had been flashed to MCX354A-FCBT which allowed it to function in Ethernet mode as well as InfiniBand mode. One is installed in my computer while the other is installed in the server and they are connected by a direct attach copper (DAC) 40 GbE cable. The idea to do this came to me after watching this [video](https://www.youtube.com/watch?v=OZ8ZS1CwbPI&ab_channel=RaidOwl).
 
 ### Windows Setup
 
@@ -53,6 +53,28 @@ In the image both settings are grayed out as I set it up using Mellanox MFT whic
 
 For this Operating System the setup was not as straight forward there are 2 main problems compared to the Windows setup. The first is that there is no way to change the ports on the card to Ethernet mode using a GUI so MFT needs to be used and the second problem is that the Kernal does not allocate memory for the driver by default.
 
+To solve the first problem, we need to connect to the TrueNAS server's shell. This can be done through the web GUI or enabling SSH to connect from another machine. Then create a folder somewhere (I did it my user's home directory) using the command line and use wget to download MFT from [here]( https://network.nvidia.com/products/adapter-software/firmware-tools/) by selecting version 4.22.1-LTS -> Linux -> DEB based and x64 or whatever architecture you are using then right click on the link and copying it so you can use ``` wget link.com ``` to download it and then unzip it in that folder. From here you can follow the rest of the guide from [here](https://blog.insanegenius.com/2020/06/21/moving-from-unraid-to-proxmox-ve/). At this point you should have the device running in Ethernet mode.
+
+To solve the second problem we once again need to connect to the TrueNAS server's shell as mentioned above. Once in the terminal enter the command ```nano /usr/local/bin/truenas-grub.py ```. Then from here scroll down to ```config  = {``` and make sure that it is equal to:
+```
+config = [
+        'GRUB_DISTRIBUTOR="TrueNAS Scale"',
+        'GRUB_CMDLINE_LINUX_DEFAULT="pci=realloc=off libata.allow_tpm=1 systemd.unified_cgroup_hierarchy=0 amd_iommu=on iommu=pt '
+        'kvm_amd.npt=1 kvm_amd.avic=1 intel_iommu=on zfsforce=1'
+        f'{f" {kernel_extra_args}" if kernel_extra_args else ""}"',
+    ]
+```
+Then restart the system and the card should show up in the TrueNAS dashbord like this:
+
+[<img src=images/MellanoxNotConnected.PNG height=400>](images/MellanoxNotConnected.PNG)
+
+The next part is simple we just need to setup IP addresses on the device as the two systems are connected directly without a switch to automatically assign them. On Windows go to Network Connections and right click on the network adapter that the cable was attached to and select properties. Then double click on the Internet Protocol Version 4 and enable the option to use a given address and to use a given DNS server address. Enter in an IP address and Subnet Mask as shown in the image below.
+
+[<img src=images/WindowsIPConfig.PNG height=600>](images/WindowsIPConfig.PNG)
+
+Now on the TrueNAS side from the web GUI go to network -> then select the interface that the cable is connected to and add an Alias. The IP address used here should have the same staring portions with the last part changed and they should use the same subnet mask.
+
+[<img src=images/TrueNASIPConfig.PNG height=600>](images/TrueNASIPConfig.PNG)
 
 ## Modifications
 
