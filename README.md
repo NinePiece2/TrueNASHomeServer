@@ -13,4 +13,4 @@ It would eventually be upgraded to a 1TB Hard Drive and a 250 GB Boot SSD that w
 With the loss of data in mind as well as possible virtualization it was important to start with system that would not be easily corrupted. With the loss of data in mind as well as possible virtualization it was important to start with system that would not be easily corrupted. This means some sort of hardware redundancy, some of the options I considered were Raid 1, Raid Z and Raid Z2. Eventually I settled on using 3 4 Tb drives in Raid Z1 which would allow for one drive to fail completely without any data loss. 
 
 When it comes to the other hardware I just tried to reuse as much previous hardware as I could and the current hardware configuration is shown in the image below: 
-[<img src=src/CurrentConfig.png height=300>](src/CurrentConfig.png)
+[<img src=images/CurrentConfig.png height=500>](images/CurrentConfig.png)
