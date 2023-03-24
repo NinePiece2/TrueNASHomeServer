@@ -34,6 +34,13 @@ After this the system would boot loop after reaching the login screen. This was 
 
 [<img src=images/SCSIController.PNG height=400>](images/SCSIController.PNG)
 
+After this its as simple as following the rest of the YouTube video and setting everything up through Cloudflare. The load balancer is currently hosts the TrueNAS server on the domain [truenas.ninepiece2.tk]( truenas.ninepiece2.tk).
+
+
+## Setting Up a Pair of Mellanox Connectx-3 
+
+This honestly should have been simpler but took a lot of time to figure out as there are not many people running this configuration
+
 ## Modifications
 
 After the initial setup another 3 drive Vdev was added and striped to the already exisiting Raid-Z1 pool. 
