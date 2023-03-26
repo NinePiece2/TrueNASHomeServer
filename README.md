@@ -1,5 +1,20 @@
 # TrueNASHomeServer
 
+## Table of Contents
+- [TrueNASHomeServer](#truenashomeserver)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Past Configurations and Insperations](#past-configurations-and-insperations)
+  - [Current Configurations](#current-configurations)
+  - [Virtual Environments](#virtual-environments)
+  - [Setting Up a Pair of Mellanox Connectx-3](#setting-up-a-pair-of-mellanox-connectx-3)
+    - [Windows Setup](#windows-setup)
+    - [TrueNAS Scale Setup](#truenas-scale-setup)
+  - [Apps/Docker and Kubernetes](#appsdocker-and-kubernetes)
+  - [Modifications](#modifications)
+
+## Introduction
+
 First off most of this project will be documented in this README markdown along with the history of the project, and much of the troubleshooting done to get the server to where it is now.
 
 ## Past Configurations and Insperations
