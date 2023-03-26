@@ -74,7 +74,13 @@ The next part is simple we just need to setup IP addresses on the device as the 
 
 Now on the TrueNAS side from the web GUI go to network -> then select the interface that the cable is connected to and add an Alias. The IP address used here should have the same staring portions with the last part changed and they should use the same subnet mask.
 
-[<img src=images/TrueNASIPConfig.PNG height=500>](images/TrueNASIPConfig.PNG)
+[<img src=images/TrueNASIPConfig.PNG height=400>](images/TrueNASIPConfig.PNG)
+
+## Apps/Docker and Kubernetes
+
+After all of this setup I have a few apps that run off the built in Docker and Kubernetes in TrueNAS Scale. From the Official TrueNAS charts I have a Plex Media Server that has media that I have collected through the years and want to preserve digitally. I also have netdata which allows me to track the usage of the server overall as well as any apps that are running off of it. I used to also have a Pi-Hole server that ran as an app form the Truecharts catalog but it stopped working so I just turned it off and haven’t taken the time to fix it.
+
+[<img src=images/Apps.PNG height=200>](images/Apps.PNG)
 
 ## Modifications
 
