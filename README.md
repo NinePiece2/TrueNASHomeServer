@@ -57,7 +57,7 @@ For my application that meant having a single Virtual IP Address with multiple S
 
 Sub Virtual Services
 
-[<img src=images/ContentMatchingRules.png height=220>](images/ContentMatchingRules.png)
+[<img src=images/ContentMatchingRules.png height=170>](images/ContentMatchingRules.png)
 
 Content Matching Rules
 
