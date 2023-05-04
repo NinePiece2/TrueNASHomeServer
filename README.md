@@ -101,7 +101,7 @@ After all of this setup I have a few apps that run off the built in Docker and K
 
 When it comes to Docker and Kubernetes there is a third additional virtual machine that was added to run Microk8s. The plan was to originally just use Kubernetes however due to a limitation of Ubuntu 22.04 it was not initializing. However, Microk8s can be installed in the installation of Ubuntu 22.04 so that is what was chosen. Microk8s acts exactly like Kubernetes just having one application that handles, Kubectl, Kubelet and Kubeadm. Currently the addons that have been enabled:
 
-[<img src=images/Microk8s_Addons.PNG height=150>](images/Microk8s_Addons.PNG)
+[<img src=images/Microk8s_Addons.png height=150>](images/Microk8s_Addons.png)
 
 </br>
 
@@ -111,7 +111,7 @@ Currently running on Kubernetes in this virtual machine is:
 
 These are the pods for those projects:
 
-[<img src=images/Pods.PNG height=150>](images/Pods.PNG)
+[<img src=images/Pods.png height=150>](images/Pods.png)
 
 ## Modifications
 
