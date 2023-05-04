@@ -51,6 +51,15 @@ After this the system would boot loop after reaching the login screen. This was 
 
 After this its as simple as following the rest of the YouTube video and setting everything up through Cloudflare. The load balancer is currently hosts the TrueNAS server on the domain [truenas.ninepiece2.tk](https://truenas.ninepiece2.tk).
 
+For my application that meant having a single Virtual IP Address with multiple Sub Virtual Services that each have one Real Server associated with them and one Content Matching Rule. The images below show the Sub Virtual Services and the Content Matching Rules that were created:
+
+[<img src=images/SubVirtualServices.png height=220>](images/SubVirtualServices.png)
+
+Sub Virtual Services
+
+[<img src=images/ContentMatchingRules.png height=220>](images/ContentMatchingRules.png)
+
+Content Matching Rules
 
 ## Setting Up a Pair of Mellanox Connectx-3
 
