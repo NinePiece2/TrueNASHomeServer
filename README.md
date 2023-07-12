@@ -116,7 +116,7 @@ When it comes to Docker and Kubernetes there is a third additional virtual machi
 
 Currently running on Kubernetes in this virtual machine is:
 - [ESPN Betting Website Prototype (Full Stack)](https://github.com/NinePiece2/ESPN-Betting-Website-Prototype-Full-Stack)
-- [Human Face Generator](https://github.com/Siddhant0701/Human-Face-Generator)
+- [ArtiFace: Facial Art Synthesizer](https://github.com/Siddhant0701/ArtiFace)
 
 These are the pods for those projects:
 
