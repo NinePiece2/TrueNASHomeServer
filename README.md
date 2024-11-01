@@ -1,4 +1,4 @@
-# TrueNASHomeServer
+# Home Cloud Server
 
 ## Table of Contents
 - [TrueNASHomeServer](#truenashomeserver)
