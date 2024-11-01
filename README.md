@@ -49,7 +49,7 @@ After this the system would boot loop after reaching the login screen. This was 
 
 [<img src=images/SCSIController.PNG height=400>](images/SCSIController.PNG)
 
-After this its as simple as following the rest of the YouTube video and setting everything up through Cloudflare. The load balancer is currently hosts the TrueNAS server on the domain [truenas.ninepiece2.tk](https://truenas.ninepiece2.tk).
+After this its as simple as following the rest of the YouTube video and setting everything up through Cloudflare. The load balancer is currently hosts the TrueNAS server on the domain [truenas.romitsagu.com](https://truenas.romitsagu.com).
 
 For my application that meant having a single Virtual IP Address with multiple Sub Virtual Services that each have one Real Server associated with them and one Content Matching Rule. The images below show the Sub Virtual Services and the Content Matching Rules that were created:
 
